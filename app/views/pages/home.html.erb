@@ -2,6 +2,9 @@
   <div class="banner-content">
     <h2>Un problème de vélo dans Paris?</h2>
     <p>Nous vous venons en aide en 30 minutes</p>
-    <div class="btn btn-primary btn-lg"></div>
+    <%= form_tag(new_repair_path, method: :get, class: "form-inline form-home") do %>
+      <%= text_field_tag :address, nil, class: "form-control", placeholder: "Address"%>
+      <%= submit_tag "Rescue me now!", class: "btn btn-danger"%>
+    <% end %>
   </div>
 </div>
