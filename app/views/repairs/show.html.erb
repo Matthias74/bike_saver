@@ -1,0 +1,6 @@
+<h1>Voici votre situation:</h1>
+<p>Vous etes au <%=@repair.address%></p>
+<p>Votre problème est :<%=@repair.category%></p>
+<%if @repair.description != ""%>
+  <%=@repair.description%>
+<%end%>

@@ -7,7 +7,11 @@ class RepairsController < ApplicationController
   def create
     @repair = Repair.new(repair_params)
     @repair.save
-    redirect_to root_path
+    redirect_to repair_path(@repair)
+  end
+
+  def show
+    @repair = Repair.find(params[:id])
   end
 
   private
