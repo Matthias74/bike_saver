@@ -1,4 +1,9 @@
 class RepairsController < ApplicationController
+
+  def index
+    @repair = Repair.all
+  end
+
   def new
     @repair = Repair.new
     @address = params[:address]
