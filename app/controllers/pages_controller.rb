@@ -2,9 +2,10 @@ class PagesController < ApplicationController
 skip_before_action :authenticate_user!, only: :home
 
   def home
-    if current_user.saver
-      #changer ce reder pour le mettre sur le dashboard
-      #render 'repairs/new'
+    if current_user == nil
+      render 'pages/home'
+    elsif current_user.saver == true
+      render 'repairs/index'
     else
       render 'pages/home'
     end
