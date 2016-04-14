@@ -1,2 +1,14 @@
 <h1 class="text-center">Bonjour <%=current_user.firstname%></h1>
 
+
+<%@repair.each do |r|%>
+  <ul class="list-unstyled">
+    <li>
+      <strong><%=r.category.capitalize%></strong>
+      <%=r.address%>
+      <!-->Ici ajouter le bouton pour attribuer un saver</!-->
+    </li>
+  </ul>
+<%end%>
+
+

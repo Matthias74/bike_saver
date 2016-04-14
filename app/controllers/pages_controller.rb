@@ -5,7 +5,7 @@ skip_before_action :authenticate_user!, only: :home
     if current_user == nil
       render 'pages/home'
     elsif current_user.saver == true
-      render 'repairs/index'
+      redirect_to repairs_path
     else
       render 'pages/home'
     end
