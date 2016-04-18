@@ -2,6 +2,7 @@ class RepairsController < ApplicationController
 
   def index
     @repair = Repair.all
+    @repair_no_saver = Repair.where(saver_id: nil)
   end
 
   def new

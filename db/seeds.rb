@@ -14,3 +14,5 @@ anna = User.create!(firstname: "Anna", email: "anna@saver.com", password: "00000
 repu = Repair.create!(address: "67 Waterloo Avenue, London", category: "flat tyre", client: thomas, saver: john )
 oberkampf = Repair.create!(address: "56 Backer Street, London", category: "worn brakes", client: thomas, saver: michel)
 wagon = Repair.create!(address: "16 Gaudelet Villa, London", category: "broken chain", client: thomas, saver: anna)
+megeve = Repair.create!(address: "32 route de la cote 2000, Megeve", category: "broken chain", client: thomas)
+cannes = Repair.create!(address: "29 avenue MAurice Derché, Cannes", category: "broken chain", client: thomas)
