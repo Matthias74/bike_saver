@@ -1,0 +1,19 @@
+<h1 class="text-center">Bonjour <%=current_user.firstname%></h1>
+
+<%if @repair_no_saver.count > 0%>
+  <%@repair_no_saver.each do |r|%>
+      <ul class="list-unstyled">
+        <li>
+          <strong><%=r.category.capitalize%></strong>
+          <%=r.address%>
+          <<!--> Ici bouton pour attribuer saver à la repair</!-->
+        </li>
+      </ul>
+  <%end%>
+<%else%>
+  <p>Désolé, toutes les réparations ont été atribuées</p>
+<%end%>
+
+
+
+
